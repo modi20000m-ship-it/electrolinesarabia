@@ -13,3 +13,293 @@ html[dir="rtl"] body{font-family:"IBM Plex Sans Arabic",Arial,sans-serif}html[di
 @media(max-width:760px){.topline span{display:none}.topline{justify-content:center}.site-header{height:76px;grid-template-columns:1fr auto auto;padding:0 20px}.brand img{width:165px;height:56px}.menu-toggle{display:block;order:3}.site-header nav{display:none;position:absolute;top:76px;left:0;right:0;background:var(--navy);padding:25px;flex-direction:column;align-items:stretch}.site-header nav.open{display:flex}.header-cta{display:none}.hero-copy{padding:85px 24px}.hero h1{font-size:clamp(3.5rem,17vw,5.2rem)}.hero-proof{grid-template-columns:1fr;gap:18px}.hero-proof div{border:0;padding:0}.hero-stage{min-height:570px}.monitor-panel{width:90%;padding:20px}.reading strong{font-size:3.4rem}.floating-alert{left:3%;top:9%}.floating-sensor{right:3%;bottom:8%}.trust-strip{justify-content:flex-start}.section{padding:85px 22px}.section-intro{grid-template-columns:1fr;gap:24px}.section-intro h2,.quality-head h2{font-size:3.5rem}.process-grid,.product-grid,.quality-grid{grid-template-columns:1fr}.product-main{grid-column:auto}.industries{min-height:auto}.industry-visual{min-height:350px}.industry-copy{padding:65px 24px}.industry-copy h2{font-size:3.5rem}.industry-list{grid-template-columns:1fr}.accesspoint-feature{grid-template-columns:1fr}.accesspoint-feature img{height:240px}.platform{padding:85px 22px}.platform-copy h2{font-size:3.5rem}.portal-shell{grid-template-columns:1fr;padding:10px}.portal-nav{display:none}.portal-main{padding:14px}.metric-row{grid-template-columns:1fr}.metric-row article{display:grid;grid-template-columns:1fr auto;align-items:center}.metric-row small{grid-column:1}.metric-row strong{grid-row:1/3;grid-column:2}.cta{padding:80px 24px}.cta h2{font-size:3.6rem}.cta-actions{align-items:stretch;flex-direction:column}.footer-main{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:10px}.hero-actions{align-items:flex-start;flex-direction:column}.reveal{transform:none}.orbit-one{width:440px;height:440px}.orbit-two{width:600px;height:600px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
 .local-brand{display:flex;align-items:center;gap:11px;text-decoration:none}.brand-mark{width:43px;height:43px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--orange),#ff9a45);color:#fff;font:800 1rem "Space Grotesk",sans-serif;box-shadow:0 8px 24px rgba(255,100,30,.23)}.brand-name{display:flex;flex-direction:column;line-height:.9;color:var(--navy)}.brand-name b{font:800 1rem "Space Grotesk",sans-serif;letter-spacing:.04em}.brand-name small{font-size:.58rem;font-weight:800;letter-spacing:.32em;color:var(--orange);margin-top:7px}.footer-wordmark{display:flex;align-items:center;gap:11px}.footer-wordmark .brand-name{color:#fff}.local-footer-brand img{display:none}.ksa-contact{color:#fff;font-size:.84rem;font-weight:700;opacity:.82}.footer-main>div>span{color:#9ea3bb;line-height:1.8;font-size:.83rem}[dir="rtl"] .brand-name small{letter-spacing:.2em}@media(max-width:560px){.brand-name b{font-size:.82rem}.brand-name small{font-size:.5rem}.brand-mark{width:38px;height:38px}.topline span:last-child{display:none}}
+
+
+/* =========================================================
+   ELECTROLINES ARABIA — CYAN / TURQUOISE / GREEN BRAND THEME
+   Added to match the new transparent logo
+   ========================================================= */
+
+:root{
+  --navy:#071521;
+  --navy2:#0D2233;
+
+  /* Keep the old variable names so the existing site works,
+     but remap them to the new Electrolines palette. */
+  --orange:#13D3C4;
+  --orange2:#39E63D;
+
+  --cyan:#08BCE8;
+  --turquoise:#13D3C4;
+  --lime:#39E63D;
+
+  --ink:#102331;
+  --muted:#6F8090;
+  --ice:#F3FAFB;
+  --line:#DCE9EC;
+  --white:#FFFFFF;
+  --green:#39E63D;
+
+  --brand-gradient:linear-gradient(90deg,#08BCE8 0%,#13D3C4 52%,#39E63D 100%);
+  --brand-gradient-diagonal:linear-gradient(135deg,#08BCE8 0%,#13D3C4 48%,#39E63D 100%);
+
+  --radius:22px;
+  --shadow:0 30px 90px rgba(7,21,33,.15);
+}
+
+/* ---------- TOP BAR ---------- */
+.topline{
+  background:var(--brand-gradient);
+  color:#06151F;
+}
+
+/* ---------- HEADER + LOGO ---------- */
+.site-header{
+  background:rgba(7,21,33,.96);
+  border-bottom:1px solid rgba(19,211,196,.16);
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  min-width:0;
+}
+
+.brand img{
+  width:235px;
+  height:66px;
+  object-fit:contain;
+  object-position:left center;
+  filter:drop-shadow(0 6px 18px rgba(8,188,232,.08));
+}
+
+.site-header nav a{
+  color:#B8C8D3;
+}
+
+.site-header nav a:hover{
+  color:#FFFFFF;
+}
+
+.language-switcher{
+  border-color:rgba(19,211,196,.34);
+}
+
+.language-switcher:hover{
+  background:var(--brand-gradient);
+  color:#06151F;
+  border-color:transparent;
+}
+
+.header-cta{
+  background:var(--brand-gradient);
+  color:#06151F;
+  box-shadow:0 10px 30px rgba(19,211,196,.18);
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--navy);
+}
+
+.hero:before{
+  background:radial-gradient(circle,rgba(19,211,196,.17),transparent 65%);
+}
+
+.hero-grid{
+  background-image:
+    linear-gradient(rgba(19,211,196,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(19,211,196,.045) 1px,transparent 1px);
+}
+
+.eyebrow span{
+  background:var(--brand-gradient);
+}
+
+.hero h1 em,
+.section h2 em,
+.platform h2 em,
+.cta h2 em{
+  color:transparent;
+  background:var(--brand-gradient);
+  -webkit-background-clip:text;
+  background-clip:text;
+}
+
+.button-primary{
+  background:var(--brand-gradient);
+  color:#06151F;
+  box-shadow:0 12px 30px rgba(19,211,196,.18);
+}
+
+.button-primary:hover{
+  background:linear-gradient(90deg,#09C7E8 0%,#16DFC8 50%,#45F04A 100%);
+  transform:translateY(-2px);
+}
+
+.hero-stage{
+  background:
+    linear-gradient(110deg,rgba(7,21,33,.35),rgba(7,21,33,.88)),
+    url('assets/hero.jpg') center/cover;
+}
+
+.hero-stage:after{
+  background:linear-gradient(90deg,var(--navy),transparent 25%);
+}
+
+.monitor-panel .line,
+.portal-line{
+  stroke:var(--turquoise);
+}
+
+/* ---------- WHITE / LIGHT SECTIONS ---------- */
+.section-no,
+.kicker,
+.process-icon,
+.product-media>span,
+.product-content small,
+.accesspoint-feature small,
+.product-content a,
+.accesspoint-feature a,
+.industry-list span,
+.quality-icon{
+  color:var(--turquoise);
+}
+
+.process-card:hover,
+.product-card:hover{
+  border-color:rgba(19,211,196,.38);
+  box-shadow:0 22px 65px rgba(7,21,33,.12);
+}
+
+.process-card.active{
+  background:var(--brand-gradient-diagonal);
+  border-color:transparent;
+  color:#06151F;
+}
+
+.process-card.active .process-no,
+.process-card.active p{
+  color:#06151F;
+}
+
+.process-card.active .process-icon{
+  background:#FFFFFF;
+  color:var(--turquoise);
+}
+
+/* ---------- DARK INDUSTRY / PLATFORM SECTIONS ---------- */
+.industries,
+.platform,
+footer{
+  background:var(--navy);
+}
+
+.image-label{
+  background:rgba(7,21,33,.92);
+  border-left-color:var(--turquoise);
+}
+
+.platform-copy li>span{
+  background:rgba(19,211,196,.15);
+  color:var(--turquoise);
+}
+
+.portal-nav{
+  background:var(--navy2);
+}
+
+.portal-nav b span{
+  color:var(--turquoise);
+}
+
+.portal-nav i:first-child{
+  background:var(--brand-gradient-diagonal);
+}
+
+/* ---------- CTA ---------- */
+.cta{
+  background:var(--brand-gradient-diagonal);
+  color:#06151F;
+}
+
+.cta .kicker{
+  color:#06151F;
+}
+
+.cta h2 em{
+  color:var(--navy);
+  background:none;
+  -webkit-text-fill-color:initial;
+}
+
+.cta>div>p{
+  color:#0A2732;
+}
+
+.button-light{
+  background:#FFFFFF;
+  color:#087F92;
+}
+
+.cta-actions>a:last-child{
+  color:#06151F;
+  border-bottom-color:rgba(6,21,31,.35);
+}
+
+/* ---------- LOCAL TEXT LOGO FALLBACK ---------- */
+.brand-mark{
+  background:var(--brand-gradient-diagonal);
+  color:#FFFFFF;
+  box-shadow:0 8px 24px rgba(19,211,196,.22);
+}
+
+.brand-name small{
+  color:var(--turquoise);
+}
+
+/* ---------- FOOTER LOGO ---------- */
+.footer-brand img{
+  width:220px;
+  height:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 7px 20px rgba(8,188,232,.08));
+}
+
+/* ---------- FOCUS / SELECTION DETAILS ---------- */
+::selection{
+  background:rgba(19,211,196,.30);
+  color:var(--navy);
+}
+
+a:focus-visible,
+button:focus-visible{
+  outline:2px solid var(--cyan);
+  outline-offset:3px;
+}
+
+/* ---------- RESPONSIVE LOGO ---------- */
+@media(max-width:1100px){
+  .brand img{
+    width:205px;
+    height:62px;
+  }
+}
+
+@media(max-width:760px){
+  .brand img{
+    width:185px;
+    height:54px;
+  }
+
+  .site-header nav{
+    background:var(--navy);
+  }
+}
+
+@media(max-width:560px){
+  .brand img{
+    width:170px;
+    height:50px;
+  }
+}
