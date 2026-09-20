@@ -140,7 +140,7 @@ html[dir="rtl"] body{font-family:"IBM Plex Sans Arabic",Arial,sans-serif}html[di
 .hero-stage{
   background:
     linear-gradient(110deg,rgba(7,21,33,.35),rgba(7,21,33,.88)),
-    url('assets/hero.jpg') center/cover;
+    url('assets/hero.png') center/cover;
 }
 
 .hero-stage:after{
@@ -301,5 +301,495 @@ button:focus-visible{
   .brand img{
     width:170px;
     height:50px;
+  }
+}
+
+/* =========================================================
+   PROFESSIONAL PRODUCT INQUIRY FORM
+   ========================================================= */
+
+.cta .contact-shell{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:minmax(0,.85fr) minmax(500px,1.15fr);
+  gap:clamp(42px,6vw,90px);
+  align-items:center;
+  width:100%;
+  max-width:1380px;
+  margin:0 auto;
+}
+
+.contact-copy{
+  min-width:0;
+}
+
+.contact-copy h2{
+  font-size:clamp(3.3rem,5vw,5.6rem);
+}
+
+.cta .ksa-contact{
+  max-width:390px;
+  color:var(--navy);
+  opacity:.78;
+}
+
+.inquiry-card{
+  color:var(--ink);
+  background:rgba(255,255,255,.97);
+  border:1px solid rgba(255,255,255,.72);
+  border-radius:28px;
+  box-shadow:0 35px 90px rgba(7,21,33,.22);
+  padding:clamp(25px,3vw,40px);
+  backdrop-filter:blur(14px);
+}
+
+.inquiry-card__head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:20px;
+  margin-bottom:27px;
+}
+
+.inquiry-card__head small{
+  display:block;
+  margin-bottom:7px;
+  color:var(--turquoise);
+  font-size:.68rem;
+  font-weight:800;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+
+.inquiry-card__head h3{
+  margin:0;
+  color:var(--ink);
+  font:700 clamp(1.55rem,2.2vw,2.15rem)/1.12 "Space Grotesk",sans-serif;
+  letter-spacing:-.035em;
+}
+
+.inquiry-card__badge{
+  flex:0 0 auto;
+  display:inline-grid;
+  place-items:center;
+  min-width:54px;
+  height:54px;
+  padding:0 13px;
+  color:#fff;
+  background:var(--navy);
+  border:1px solid rgba(19,211,196,.24);
+  border-radius:16px;
+  box-shadow:0 10px 26px rgba(7,21,33,.18);
+  font-size:.68rem;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+
+.inquiry-form,
+.inquiry-form *{
+  box-sizing:border-box;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+
+.form-field{
+  min-width:0;
+}
+
+.form-field--full{
+  grid-column:1/-1;
+}
+
+.form-field label,
+.product-picker legend{
+  display:block;
+  margin:0 0 8px;
+  color:var(--ink);
+  font-size:.78rem;
+  font-weight:800;
+}
+
+.required-mark{
+  color:var(--turquoise);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea{
+  width:100%;
+  min-height:52px;
+  padding:13px 15px;
+  color:var(--ink);
+  background:var(--ice);
+  border:1px solid var(--line);
+  border-radius:12px;
+  outline:none;
+  font:500 .84rem Manrope,Arial,sans-serif;
+  transition:border-color .2s ease,box-shadow .2s ease,background .2s ease;
+}
+
+.form-field textarea{
+  min-height:118px;
+  resize:vertical;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder{
+  color:#8595A0;
+}
+
+.form-field input:hover,
+.form-field textarea:hover{
+  border-color:rgba(19,211,196,.48);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus{
+  background:#fff;
+  border-color:var(--turquoise);
+  box-shadow:0 0 0 4px rgba(19,211,196,.14);
+}
+
+.product-picker{
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+.product-options{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+
+.product-option{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-height:46px;
+  margin:0;
+  padding:10px 12px;
+  color:var(--ink);
+  background:var(--ice);
+  border:1px solid var(--line);
+  border-radius:12px;
+  cursor:pointer;
+  font-size:.76rem;
+  font-weight:700;
+  transition:border-color .2s ease,background .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+
+.product-option:hover{
+  transform:translateY(-1px);
+  background:#fff;
+  border-color:var(--turquoise);
+  box-shadow:0 8px 20px rgba(7,21,33,.07);
+}
+
+.product-option:has(input:checked){
+  color:#07242B;
+  background:rgba(19,211,196,.11);
+  border-color:var(--turquoise);
+}
+
+.product-option input{
+  width:17px;
+  height:17px;
+  margin:0;
+  accent-color:var(--turquoise);
+}
+
+.consent-row{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  margin-top:18px;
+  color:var(--muted);
+  font-size:.72rem;
+  line-height:1.55;
+}
+
+.consent-row input{
+  flex:0 0 auto;
+  width:17px;
+  height:17px;
+  margin-top:1px;
+  accent-color:var(--turquoise);
+}
+
+.form-submit-row{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-top:20px;
+}
+
+.inquiry-submit{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  min-height:54px;
+  padding:0 24px;
+  color:#06151F;
+  background:var(--brand-gradient);
+  border:0;
+  border-radius:999px;
+  cursor:pointer;
+  font:800 .8rem Manrope,Arial,sans-serif;
+  box-shadow:0 12px 28px rgba(19,211,196,.20);
+  transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;
+}
+
+.inquiry-submit:hover{
+  transform:translateY(-2px);
+  box-shadow:0 16px 34px rgba(19,211,196,.30);
+  filter:saturate(1.08) brightness(1.03);
+}
+
+.inquiry-submit:focus-visible{
+  outline:2px solid var(--navy);
+  outline-offset:3px;
+}
+
+.form-note{
+  margin:0;
+  color:var(--muted);
+  font-size:.68rem;
+  line-height:1.45;
+}
+
+.form-honeypot{
+  position:absolute!important;
+  left:-9999px!important;
+  width:1px!important;
+  height:1px!important;
+  overflow:hidden!important;
+}
+
+html[dir="rtl"] .inquiry-card,
+html[dir="rtl"] .inquiry-card input,
+html[dir="rtl"] .inquiry-card select,
+html[dir="rtl"] .inquiry-card textarea{
+  text-align:right;
+}
+
+html[dir="rtl"] .inquiry-card__head h3,
+html[dir="rtl"] .inquiry-submit,
+html[dir="rtl"] .form-field input,
+html[dir="rtl"] .form-field select,
+html[dir="rtl"] .form-field textarea{
+  font-family:"IBM Plex Sans Arabic",Arial,sans-serif;
+}
+
+@media(max-width:1100px){
+  .cta .contact-shell{
+    grid-template-columns:1fr;
+  }
+
+  .contact-copy{
+    max-width:850px;
+  }
+
+  .inquiry-card{
+    width:min(100%,850px);
+  }
+}
+
+@media(max-width:760px){
+  .contact-copy h2{
+    font-size:3.4rem;
+  }
+
+  .inquiry-card{
+    padding:23px 19px;
+    border-radius:22px;
+  }
+
+  .form-grid,
+  .product-options{
+    grid-template-columns:1fr;
+  }
+
+  .form-submit-row{
+    align-items:stretch;
+    flex-direction:column;
+  }
+
+  .inquiry-submit{
+    width:100%;
+  }
+}
+
+@media(max-width:420px){
+  .contact-copy h2{
+    font-size:2.85rem;
+  }
+
+  .inquiry-card__badge{
+    min-width:48px;
+    height:48px;
+  }
+}
+
+/* =========================================================
+   COOKIE CONSENT
+   ========================================================= */
+
+.cookie-banner[hidden]{
+  display:none;
+}
+
+.cookie-banner{
+  position:fixed;
+  z-index:1000;
+  left:24px;
+  right:24px;
+  bottom:24px;
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:18px;
+  width:min(760px,calc(100% - 48px));
+  margin:0 auto;
+  padding:18px;
+  color:#fff;
+  background:rgba(7,21,33,.97);
+  border:1px solid rgba(19,211,196,.25);
+  border-radius:20px;
+  box-shadow:0 24px 70px rgba(0,0,0,.35);
+  backdrop-filter:blur(18px);
+  animation:cookieReveal .38s ease both;
+}
+
+@keyframes cookieReveal{
+  from{
+    opacity:0;
+    transform:translateY(18px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.cookie-banner__icon{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  color:#06151f;
+  background:var(--brand-gradient-diagonal);
+  border-radius:14px;
+  font:800 1rem "Space Grotesk",sans-serif;
+  box-shadow:0 8px 24px rgba(19,211,196,.18);
+}
+
+.cookie-banner__copy strong{
+  display:block;
+  margin-bottom:4px;
+  color:#fff;
+  font:700 1rem "Space Grotesk",sans-serif;
+}
+
+.cookie-banner__copy p{
+  margin:0;
+  color:#b8c8d3;
+  font-size:.75rem;
+  line-height:1.55;
+}
+
+.cookie-banner__actions{
+  display:flex;
+  align-items:center;
+  gap:9px;
+}
+
+.cookie-button{
+  min-height:43px;
+  padding:0 17px;
+  border-radius:999px;
+  cursor:pointer;
+  font-size:.75rem;
+  font-weight:800;
+  transition:transform .2s ease,border-color .2s ease,background .2s ease;
+}
+
+.cookie-button:hover{
+  transform:translateY(-1px);
+}
+
+.cookie-button--deny{
+  color:#dbe7eb;
+  background:transparent;
+  border:1px solid rgba(255,255,255,.25);
+}
+
+.cookie-button--deny:hover{
+  border-color:rgba(19,211,196,.7);
+}
+
+.cookie-button--accept{
+  color:#06151f;
+  background:var(--brand-gradient);
+  border:1px solid transparent;
+  box-shadow:0 8px 22px rgba(19,211,196,.18);
+}
+
+.cookie-button:focus-visible,
+.cookie-settings-link:focus-visible{
+  outline:2px solid var(--cyan);
+  outline-offset:3px;
+}
+
+.cookie-settings-link{
+  padding:0;
+  color:#bbc0d1;
+  background:none;
+  border:0;
+  cursor:pointer;
+  font-size:.68rem;
+}
+
+.cookie-settings-link:hover{
+  color:#fff;
+}
+
+html[dir="rtl"] .cookie-banner__copy strong{
+  font-family:"IBM Plex Sans Arabic",Arial,sans-serif;
+}
+
+@media(max-width:760px){
+  .cookie-banner{
+    left:14px;
+    right:14px;
+    bottom:14px;
+    grid-template-columns:auto 1fr;
+    width:calc(100% - 28px);
+    gap:13px;
+    padding:16px;
+    border-radius:18px;
+  }
+
+  .cookie-banner__actions{
+    grid-column:1/-1;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+
+  .cookie-button{
+    width:100%;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .cookie-banner{
+    animation:none;
   }
 }
